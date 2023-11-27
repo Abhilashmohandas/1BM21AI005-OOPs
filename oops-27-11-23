@@ -1,0 +1,58 @@
+class Songs:
+    def __init__(self,lyrics):
+        self.lyrics = lyrics
+    def sing_me_a_song(self):
+        for lyric in self.lyrics:
+            print(lyric)
+lyrics = ['come on',"he's a frekn badass",'badasss maaa','''rest in peace''']
+obj = Songs(lyrics)
+obj.sing_me_a_song()
+
+
+class Birthday:
+    def __init__(self,name,age):
+        self.name = name
+        self.age  = age
+    def birthday(self):
+        self.age +=1
+        return self.age
+obj = Birthday('vijay',50)
+print("Happy bday legend , you are now ", obj.birthday())
+
+
+# create parameterized constructor for rectangle class that takes 2 args length and breadth , initialize the both of the object with the values pass as args  
+class Rectangle:
+    def __init__(self,length,breadth):
+        self.length = length
+        self.breadth  = breadth
+    def printobj(self):
+        print("Length is",self.length,"Breadth is",self.breadth)
+obj = Rectangle(10,20)
+obj.printobj()                                                              
+
+
+
+
+class Car:
+    def __init__(self,brand,model,year):
+        self.brand = brand
+        self.model = model
+        self.year = year
+    def PrintDetails(self):
+        print(self.brand )
+        print(self.model )
+        print(self.year )
+obj = Car('hyundai','asta',2023)
+obj.PrintDetails()
+
+
+class Student:
+    def __init__(self,name ="defalut_name",age=12,grade="f") -> None:
+        self.name = name
+        self.age = age
+        self.grade = grade
+    def printobj(self):
+        return self.name , self.age ,self.grade
+obj = Student()
+x , y , z = obj.printobj()
+print(x,y,z)
