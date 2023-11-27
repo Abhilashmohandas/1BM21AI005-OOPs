@@ -56,3 +56,28 @@ class Student:
 obj = Student()
 x , y , z = obj.printobj()
 print(x,y,z)
+
+
+
+
+
+import datetime
+class Dog:
+    name = 'tom'
+    breed = 'pug'
+    dob = datetime.datetime(2021,12,31,12,0,0,0)
+    def bark(self):
+        print("wooooofff!!!?")
+        print(self.dob)
+    def cal_age(self):
+        self.age = -(datetime.datetime(2021,12,31,12,0,0,0) - datetime.datetime.now())/7
+        print(self.age)
+    def get_name(self):
+        print("dog's name is:",(self.name).title()) 
+    def set_name(self):
+        new_name = input("Enter the new name of the dog: ")
+        self.name = new_name
+obj = Dog()
+obj.set_name()
+obj.get_name()
+obj.bark()
